@@ -3,16 +3,37 @@ import { Sticky } from 'semantic-ui-react'
 
 import '../../App.css'
 
-const Header = () => {
+const Header = ({ clickHandler }) => {
 	return (
 		<header className="app-header">
-			<span className="header-my-name">Dylan Grant</span>
+			<span className="header-my-name" onClick={clickHandler}>
+				Dylan Grant
+			</span>
 			<ul className="header-nav">
-				<li className="header-nav-item">Home</li>
-				<li className="header-nav-item">About</li>
-				<li className="header-nav-item">Portfolio</li>
-				<li className="header-nav-item">Idioms</li>
-				<li className="header-nav-item">Contact</li>
+				<li
+					className="header-nav-item"
+					onClick={clickHandler}
+					data-view-visibility="ABOUT">
+					About
+				</li>
+				<li
+					className="header-nav-item"
+					onClick={clickHandler}
+					data-view-visibility="PORTFOLIO">
+					Portfolio
+				</li>
+				<li
+					className="header-nav-item"
+					onClick={clickHandler}
+					data-view-visibility="IDIOMS">
+					Idioms
+				</li>
+				<li
+					className="header-nav-item"
+					onClick={clickHandler}
+					data-view-visibility="CONTACT">
+					Contact
+				</li>
 			</ul>
 		</header>
 	)
