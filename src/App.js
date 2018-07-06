@@ -149,9 +149,9 @@ class App extends Component {
 					<Contact isVisibile={this.state.visibleSection === 'CONTACT'} />
 				</main>
 
-				<footer className="app-footer">
+				{/* <footer className="app-footer">
 					<p>Footer</p>
-				</footer>
+				</footer> */}
 			</div>
 		)
 	}

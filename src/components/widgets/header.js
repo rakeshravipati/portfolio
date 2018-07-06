@@ -22,12 +22,12 @@ const Header = ({ clickHandler }) => {
 					data-view-visibility="PORTFOLIO">
 					Portfolio
 				</li>
-				<li
+				{/* <li
 					className="header-nav-item"
 					onClick={clickHandler}
 					data-view-visibility="IDIOMS">
 					Idioms
-				</li>
+				</li> */}
 				<li
 					className="header-nav-item"
 					onClick={clickHandler}
