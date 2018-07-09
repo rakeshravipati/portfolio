@@ -1,13 +1,15 @@
 import React from 'react'
 import { Form, Button } from 'semantic-ui-react'
 
+import { PageView } from './view.css.js'
+
 const Contact = ({ isVisibile }) => {
 	const styles = {
 		width: isVisibile ? '100%' : '0',
 	}
 
 	return (
-		<section className="contact-view" style={styles}>
+		<PageView className="contact-view" style={styles}>
 			<Form className="contact-form">
 				<Form.Field>
 					<Form.Input fluid label="Full name" placeholder="Full name" />
@@ -21,9 +23,11 @@ const Contact = ({ isVisibile }) => {
 				<Form.Field>
 					<Form.TextArea fluid label="Message" placeholder="Message" />
 				</Form.Field>
-				<Button type="submit">Submit</Button>
+				<Button className="contact-button" type="submit">
+					Submit
+				</Button>
 			</Form>
-		</section>
+		</PageView>
 	)
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { PageView } from './view.css.js'
 import Tile from '../widgets/tile'
 
 const Portfolio = ({ isVisibile, data }) => {
@@ -14,9 +15,9 @@ const Portfolio = ({ isVisibile, data }) => {
 	}
 
 	return (
-		<section className="portfolio-view" style={styles}>
+		<PageView className="portfolio-view" style={styles}>
 			<div className="section-wrapper masonry-grid">{projectList()}</div>
-		</section>
+		</PageView>
 	)
 }
 

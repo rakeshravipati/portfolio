@@ -3,14 +3,13 @@ import Chart from 'chart.js'
 import { HorizontalBar, Radar } from 'react-chartjs-2'
 // import { Form, Button } from 'semantic-ui-react'
 
+import { PageView } from './view.css.js'
 import { mapData } from '../../lib/helpers'
 
 const About = ({ isVisibile, data }) => {
 	const styles = {
 		width: isVisibile ? '100%' : '0',
 	}
-
-	console.log('about data', data)
 
 	const languages = () => {
 		const graphData = {
@@ -95,7 +94,7 @@ const About = ({ isVisibile, data }) => {
 	}
 
 	return (
-		<section className="about-view" style={styles}>
+		<PageView className="about-view" style={styles}>
 			<div className="section-wrapper">
 				<div className="about-section">
 					<h1 className="about-header">Elevator speech:</h1>
@@ -186,7 +185,7 @@ const About = ({ isVisibile, data }) => {
 					<div className="flex-container flex-content-around">{logos()}</div>
 				</div>
 			</div>
-		</section>
+		</PageView>
 	)
 }
 
