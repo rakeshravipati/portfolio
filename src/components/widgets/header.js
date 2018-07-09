@@ -1,11 +1,11 @@
 import React from 'react'
-import { Sticky } from 'semantic-ui-react'
 
+import { StyledHeader } from './header.css.js'
 import '../../App.css'
 
 const Header = ({ clickHandler }) => {
 	return (
-		<header className="app-header">
+		<StyledHeader className="app-header">
 			<span className="header-my-name" onClick={clickHandler}>
 				Dylan Grant
 			</span>
@@ -35,7 +35,7 @@ const Header = ({ clickHandler }) => {
 					Contact
 				</li>
 			</ul>
-		</header>
+		</StyledHeader>
 	)
 }
 

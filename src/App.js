@@ -8,6 +8,7 @@ import Header from './components/widgets/header'
 import Idioms from './components/containers/Idioms'
 import Portfolio from './components/containers/Portfolio'
 
+import { StyledApp } from './app.css.js'
 import logo from './logo.svg'
 
 import './App.css'
@@ -125,7 +126,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<StyledApp className="App">
 				<section className="home-view">
 					<div className="home-picture" />
 					<p className="home-tag-line" />
@@ -152,7 +153,7 @@ class App extends Component {
 				{/* <footer className="app-footer">
 					<p>Footer</p>
 				</footer> */}
-			</div>
+			</StyledApp>
 		)
 	}
 }
