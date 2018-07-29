@@ -1,6 +1,5 @@
 import React from 'react'
-import Chart from 'chart.js'
-import { HorizontalBar, Radar } from 'react-chartjs-2'
+import { Radar } from 'react-chartjs-2'
 // import { Form, Button } from 'semantic-ui-react'
 
 import { PageView } from './view.css.js'
@@ -86,7 +85,7 @@ const About = ({ isVisibile, data }) => {
 	const logos = () => {
 		return data.companies.map((item) => {
 			return (
-				<picture className="flex-item logos">
+				<picture className="flex-item logos" key={item._id}>
 					<img src={item.metadata.logo.url} alt="logo" />
 				</picture>
 			)

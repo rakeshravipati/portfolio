@@ -10,7 +10,7 @@ const Portfolio = ({ isVisibile, data }) => {
 
 	const projectList = () => {
 		return data.map((item) => {
-			return <Tile info={item} />
+			return <Tile info={item} key={item._id} />
 		})
 	}
 

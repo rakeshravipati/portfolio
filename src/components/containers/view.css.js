@@ -35,4 +35,8 @@ export const PageView = styled.section`
 			text-align: left;
 		}
 	}
+
+	#email {
+		display: none;
+	}
 `

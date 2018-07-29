@@ -9,7 +9,6 @@ import Idioms from './components/containers/Idioms'
 import Portfolio from './components/containers/Portfolio'
 
 import { StyledApp } from './app.css.js'
-import logo from './logo.svg'
 
 import './App.css'
 
@@ -28,7 +27,7 @@ class App extends Component {
 		visibleSection: '',
 	}
 
-	componentWillMount = async () => {
+	componentDidMount = async () => {
 		/*
 		** If I decide to go with graph.cool
 		*/

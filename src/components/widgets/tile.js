@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, Label } from 'semantic-ui-react'
 
-import { getNestedObject, mapData } from '../../lib/helpers'
+import { getNestedObject } from '../../lib/helpers'
 import '../../App.css'
 
 const Tile = ({ info }) => {
-	console.log('card info', info)
 	const getTags = () => {
 		const languagesArr = getNestedObject(info, ['metadata', 'languages'])
 		const languages = languagesArr.map((item) => {
@@ -20,7 +19,9 @@ const Tile = ({ info }) => {
 		const tags = languages.concat(technologies)
 
 		return tags.map((tagName) => (
-			<Label className="portfolio-tag">{tagName}</Label>
+			<Label className="portfolio-tag" key={tagName}>
+				{tagName}
+			</Label>
 		))
 	}
 
@@ -38,7 +39,10 @@ const Tile = ({ info }) => {
 	return (
 		<Card style={cardStyle}>
 			<picture>
-				<img src={getNestedObject(info, ['metadata', 'main_image', 'url'])} />
+				<img
+					src={getNestedObject(info, ['metadata', 'main_image', 'url'])}
+					alt="main project representation"
+				/>
 			</picture>
 			<Card.Content>
 				<Card.Header>{getNestedObject(info, ['title'])}</Card.Header>

@@ -55,19 +55,29 @@ export const StyledApp = styled.main`
 		}
 	}
 
-	.contact-form {
+	.contact-form,
+	.page-container {
 		margin-left: 30%;
 		margin-bottom: 25px;
 		padding-left: 60px;
 		padding-right: 60px;
 	}
 
+	.page-container {
+		text-align: left;
+	}
+
 	@media ${media.PHONE} {
-		.contact-form {
+		.contact-form,
+		.page-container {
 			margin-left: 0;
 			margin-bottom: 25px;
 			padding-left: 10px;
 			padding-right: 10px;
+		}
+
+		.page-container {
+			text-align: left;
 		}
 
 		.contact-button {

@@ -8,10 +8,10 @@ const Idioms = ({ isVisibile, data }) => {
 		width: isVisibile ? '100%' : '0',
 	}
 
-	console.log('idioms data', data)
+	// console.log('idioms data', data)
 	const list = () => {
 		return data.map((item) => {
-			return <li>{item.title}</li>
+			return <li key={item._id}>{item.title}</li>
 		})
 	}
 
